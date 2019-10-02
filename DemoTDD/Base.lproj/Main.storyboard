@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Io-5T-MN6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="eP0-WY-3Qd">
+            <objects>
+                <tableViewController id="KTf-r8-tnt" customClass="TableViewController" customModule="DemoTDD" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jhi-Dj-g8D">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="106" id="sBB-51-SjA" customClass="DeveloperCell" customModule="DemoTDD">
+                                <rect key="frame" x="0.0" y="28" width="414" height="106"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sBB-51-SjA" id="Exu-ah-rce">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="feN-ZV-4WL">
+                                            <rect key="frame" x="33" y="24" width="353" height="61"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" verticalCompressionResistancePriority="751" text="Serge" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHL-7j-jig">
+                                                    <rect key="frame" x="0.0" y="0.0" width="67.5" height="34.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="01001260" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfu-ar-wrd">
+                                                    <rect key="frame" x="0.0" y="41.5" width="65" height="19.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="feN-ZV-4WL" firstAttribute="leading" secondItem="Exu-ah-rce" secondAttribute="leadingMargin" constant="13" id="AUE-XQ-tvo"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="feN-ZV-4WL" secondAttribute="bottom" constant="10" id="OVV-Bn-3KZ"/>
+                                        <constraint firstItem="feN-ZV-4WL" firstAttribute="top" secondItem="Exu-ah-rce" secondAttribute="topMargin" constant="13" id="gZr-bf-EWp"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="feN-ZV-4WL" secondAttribute="trailing" constant="8" id="zP9-Wh-1vl"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="name" destination="RHL-7j-jig" id="adB-P1-EuO"/>
+                                    <outlet property="phone" destination="xfu-ar-wrd" id="gPa-Gd-ODE"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="KTf-r8-tnt" id="pgs-rR-qxT"/>
+                            <outlet property="delegate" destination="KTf-r8-tnt" id="fre-pH-w1P"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="UAh-S0-D4c"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VYl-9h-JgR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1805.7971014492755" y="141.96428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Wbw-QH-ML8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Io-5T-MN6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="41A-GN-dBb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KTf-r8-tnt" kind="relationship" relationship="rootViewController" id="TYM-BK-jkX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CZe-b6-1Q3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895.6521739130435" y="141.96428571428569"/>
+        </scene>
+    </scenes>
+</document>
